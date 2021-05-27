@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font: 1rem 'WorkSans Regular', sans-serif;
+  color: var(--dark);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+  display: block;
+  border: none;
+  font: inherit;
+  &[disabled] {
+    opacity: .7;
+  }
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
