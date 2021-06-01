@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
+    <title>Отель</title>
   </head>
   <body lang="ru">
     <header>
@@ -76,271 +76,142 @@
         <label for="menu-toggle"></label>
       </div>
     </header>
-    <main class="rooms">
-      <div class="rooms__sorter">
-        <h2 class="section-title">Наши номера</h2>
-        <div class="sorter__controls">
-          <div class="filter-open-button--mobile" role="button" aria-label="filter" tabindex="0">
-            <input type="checkbox" id="filter-open">
-            <label for="filter-open">Фильтры</label>
+    <main>
+      <article class="room room--item">
+        <div class="slideshow__wrapper">
+          <div class="slideshow__fullsize-slide">
+            <picture class="full-img active">
+              <source media="(min-width: 1366px)" srcset="./images/item/full/room-super-luxe-full-1-1366.jpg">
+              <source media="(min-width: 768px)" srcset="./images/item/full/room-super-luxe-full-1-768.jpg">
+              <img src="./images/item/full/room-super-luxe-full-1.jpg" alt="Номер Супер-Люкс">
+            </picture>
+            <picture class="full-img">
+              <source media="(min-width: 1366px)" srcset="./images/item/full/room-super-luxe-full-2-1366.jpg">
+              <source media="(min-width: 768px)" srcset="./images/item/full/room-super-luxe-full-2-768.jpg">
+              <img src="./images/item/full/room-super-luxe-full-2.jpg" alt="Номер Супер-Люкс">
+            </picture>
+            <picture class="full-img">
+              <source media="(min-width: 1366px)" srcset="./images/item/full/room-super-luxe-full-3-1366.jpg">
+              <source media="(min-width: 768px)" srcset="./images/item/full/room-super-luxe-full-3-768.jpg">
+              <img src="./images/item/full/room-super-luxe-full-3.jpg" alt="Номер Супер-Люкс">
+            </picture>
           </div>
-          <div class="sorter__custom" aria-label="sorter" tabindex="1">
-            <select id="sorter">
-              <option value="area-increase">По площади</option>
-              <option value="area-decrease">По площади</option>
-              <option value="price-higher">По цене</option>
-              <option value="price-lower">По цене</option>
-            </select>
+          <div class="slideshow__thumbnail-slide flex-container">
+            <picture class="thumb-img focused">
+              <source media="(min-width: 1366px)" srcset="./images/item/thumb/room-super-luxe-thumb-1-1366.jpg">
+              <source media="(min-width: 768px)" srcset="./images/item/thumb/room-super-luxe-thumb-1-768.jpg">
+              <img src="./images/item/thumb/room-super-luxe-thumb-1.jpg" alt="Номер Супер-Люкс">
+            </picture>
+            <picture class="thumb-img">
+              <source media="(min-width: 1366px)" srcset="./images/item/thumb/room-super-luxe-thumb-2-1366.jpg">
+              <source media="(min-width: 768px)" srcset="./images/item/thumb/room-super-luxe-thumb-2-768.jpg">
+              <img src="./images/item/thumb/room-super-luxe-thumb-2.jpg" alt="Номер Супер-Люкс">
+            </picture>
+            <picture class="thumb-img">
+              <source media="(min-width: 1366px)" srcset="./images/item/thumb/room-super-luxe-thumb-3-1366.jpg">
+              <source media="(min-width: 768px)" srcset="./images/item/thumb/room-super-luxe-thumb-3-768.jpg">
+              <img src="./images/item/thumb/room-super-luxe-thumb-3.jpg" alt="Номер Супер-Люкс">
+            </picture>
           </div>
         </div>
-      </div>
-      <aside>
-        <div class="close-button filter-close-button--mobile" role="button" tabindex="0">
-          <input type="checkbox" id="filter-close">
-          <label for="filter-close"></label>
+        <div class="room__desc">
+          <h3 class="desc__title">Супер-Люкс</h3>
+          <ul class="desc__features">
+            <li>Размеры (ШхГхВ) - 180х160х180 см</li>
+            <li>Площадь - 2,88 м2</li>
+            <li>Оснащение номера
+              <ul>
+                <li class="feature__icon bedstone">
+                  <span class="feature__desc feature--tooltip">Лежак</span>
+                </li>
+                <li class="feature__icon scratcher">
+                  <span class="feature__desc feature--tooltip">Когтеточка</span>
+                </li>
+                <li class="feature__icon playground">
+                  <span class="feature__desc feature--tooltip">Игровой-комплекс</span>
+                </li>
+                <li class="feature__icon condo">
+                  <span class="feature__desc feature--tooltip">Домик</span>
+                </li>
+              </ul>
+            </li>
+            <li>Цена за сутки: <span class="desc__price">600₽</span></li>
+          </ul>
+          <button class="book-btn" type="button">Забронировать</button>
         </div>
-        <form class="filter" action="#" method="POST">
-          <fieldset>
-            <legend>Цена за сутки,₽</legend>
-            <div class="flex-container">
-              <div class="input-mask">
-                <label for="price-range-min">от</label>
-                <input type="number" name="price-range-min" id="price-range-min" value="100">
-              </div>
-              <div class="input-mask">
-                <label for="price-range-max">до</label>
-                <input type="number" name="price-range-max" id="price-range-max" value="600">
-              </div>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Площадь</legend>
-            <label for="area-var-1">0,63 м2
-              <input type="checkbox" id="area-var-1" name="area" value="0,63" checked>
-            </label>
-            <label for="area-var-2">0,90 м2
-              <input type="checkbox" id="area-var-2" name="area" value="0,90" checked>
-            </label>
-            <label for="area-var-3">1,13 м2
-              <input type="checkbox" id="area-var-3" name="area" value="1,13" checked>
-            </label>
-            <label for="area-var-4">1,56 м2
-              <input type="checkbox" id="area-var-4" name="area" value="1,56" checked>
-            </label>
-            <label for="area-var-5">2,56 м2
-              <input type="checkbox" id="area-var-5" name="area" value="2,56" checked>
-            </label>
-            <label for="area-var-6">2,88 м2
-              <input type="checkbox" id="area-var-6" name="area" value="2,88" checked>
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Оснащение номера</legend>
-            <label for="feature-empty-room">Пустой номер
-              <input type="checkbox" id="feature-empty-room" name="feature" value="empty-room" checked>
-            </label>
-            <label for="feature-bedstone">Лежак
-              <input type="checkbox" id="feature-bedstone" name="feature" value="bedstone" checked>
-            </label>
-            <label for="feature-scratcher">Когтеточка
-              <input type="checkbox" id="feature-scratcher" name="feature" value="scratcher" checked>
-            </label>
-            <label for="feature-playground">Игровой-комплекс
-              <input type="checkbox" id="feature-playground" name="feature" value="playground" checked>
-            </label>
-            <label for="feature-condo">Домик
-              <input type="checkbox" id="feature-condo" name="feature" value="condo" checked>
-            </label>
-          </fieldset>
-          <input class="form-control" type="submit" value="Применить">
-          <input class="form-control" type="reset" value="Сбросить фильтр">
-        </form>
-      </aside>
+      </article>
       <section class="rooms">
-        <article class="room">
-          <picture class="room__img">
-            <source media="(min-width: 1366px)" srcset="./images/catalog/room-econom-1366.jpg">
-            <source media="(min-width: 768px)" srcset="./images/catalog/room-econom-768.jpg">
-            <img src="./images/catalog/room-econom.jpg" alt="Эконом">
-          </picture>
-          <div class="room__desc">
-            <h3 class="desc__title">Эконом</h3>
-            <ul class="desc__features">
-              <li>Размеры (ШхГхВ) - 90х70х180 см</li>
-              <li>Площадь - 0,63 м2</li>
-              <li>Оснащение номера
-                <ul>
-                  <li class="feature__icon empty-room">
-                    <span class="feature__desc feature--tooltip">Пустой номер</span>
-                  </li>
+        <h2 class="section-title">Номера</h2>
+        <div class="slideshow__wrapper">
+          <div class="slideshow__gallery">
+            <article class="gallery__item room active">
+              <picture class="room__img">
+                <source media="(min-width: 1366px)" srcset="./images/slideshow/room-econom-plus-1366.jpg">
+                <source media="(min-width: 768px)" srcset="./images/slideshow/room-econom-plus-768.jpg">
+                <img src="./images/slideshow/room-econom-plus.jpg" alt="Номер Эконом Плюс">
+              </picture>
+              <div class="room__desc">
+                <h3 class="desc__title">Эконом плюс</h3>
+                <ul class="desc__features features--slideshow">
+                  <li>Площадь - 0,90 м2</li>
+                  <li>Размеры (ШхГхВ) — 90х100х180 см</li>
+                  <li>Цена за сутки: 200₽</li>
                 </ul>
-              </li>
-              <li>Цена за сутки: <span class="desc__price">100₽</span></li>
-            </ul>
-            <button class="book-btn" type="button">Забронировать</button>
-          </div>
-        </article>
-        <article class="room">
-          <picture class="room__img">
-            <source media="(min-width: 1366px)" srcset="./images/catalog/room-econom-plus-1366.jpg">
-            <source media="(min-width: 768px)" srcset="./images/catalog/room-econom-plus-768.jpg">
-            <img src="./images/catalog/room-econom-plus.jpg" alt="Эконом Плюс">
-          </picture>
-          <div class="room__desc">
-            <h3 class="desc__title">Эконом Плюс</h3>
-            <ul class="desc__features">
-              <li>Размеры (ШхГхВ) - 90х100х180 см</li>
-              <li>Площадь - 0,90 м2</li>
-              <li>Оснащение номера
-                <ul>
-                  <li class="feature__icon bedstone">
-                    <span class="feature__desc feature--tooltip">Лежак</span>
-                  </li>
-                  <li class="feature__icon scratcher">
-                    <span class="feature__desc feature--tooltip">Когтеточка</span>
-                  </li>
+                <button class="book-btn" type="button">Забронировать</button>
+              </div>
+            </article>
+            <article class="gallery__item room">
+              <picture class="room__img">
+                <source media="(min-width: 1366px)" srcset="./images/slideshow/room-comfort-1366.jpg">
+                <source media="(min-width: 768px)" srcset="./images/slideshow/room-comfort-768.jpg">
+                <img src="./images/slideshow/room-comfort.jpg" alt="Номер Комфорт">
+              </picture>
+              <div class="room__desc">
+                <h3 class="desc__title">Комфорт</h3>
+                <ul class="desc__features features--slideshow">
+                  <li>Площадь - 1,13 м2</li>
+                  <li>Размеры (ШхГхВ) - 100х125х180 см</li>
+                  <li>Цена за сутки: 250₽</li>
                 </ul>
-              </li>
-              <li>Цена за сутки: <span class="desc__price">200₽</span></li>
-            </ul>
-            <button class="book-btn" type="button">Забронировать</button>
-          </div>
-        </article>
-        <article class="room">
-          <picture class="room__img">
-            <source media="(min-width: 1366px)" srcset="./images/catalog/room-comfort-1366.jpg">
-            <source media="(min-width: 768px)" srcset="./images/catalog/room-comfort-768.jpg">
-            <img src="./images/catalog/room-comfort.jpg" alt="Комфорт">
-          </picture>
-          <div class="room__desc">
-            <h3 class="desc__title">Комфорт</h3>
-            <ul class="desc__features">
-              <li>Размеры (ШхГхВ) - 100х125х180 см</li>
-              <li>Площадь - 1,13 м2</li>
-              <li>Оснащение номера
-                <ul>
-                  <li class="feature__icon bedstone">
-                    <span class="feature__desc feature--tooltip">Лежак</span>
-                  </li>
-                  <li class="feature__icon scratcher">
-                    <span class="feature__desc feature--tooltip">Когтеточка</span>
-                  </li>
-                  <li class="feature__icon playground">
-                    <span class="feature__desc feature--tooltip">Игровой-комплекс</span>
-                  </li>
+                <button class="book-btn" type="button">Забронировать</button>
+              </div>
+            </article>
+            <article class="gallery__item room">
+              <picture class="room__img">
+                <source media="(min-width: 1366px)" srcset="./images/slideshow/room-suite-1366.jpg">
+                <source media="(min-width: 768px)" srcset="./images/slideshow/room-suite-768.jpg">
+                <img src="./images/slideshow/room-suite.jpg" alt="Номер Сьют">
+              </picture>
+              <div class="room__desc">
+                <h3 class="desc__title">Сьют</h3>
+                <ul class="desc__features features--slideshow">
+                  <li>Площадь - 1,56 м2</li>
+                  <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+                  <li>Цена за сутки: 350₽</li>
                 </ul>
-              </li>
-              <li>Цена за сутки: <span class="desc__price">250₽</span></li>
-            </ul>
-            <button class="book-btn" type="button">Забронировать</button>
+                <button class="book-btn" type="button">Забронировать</button>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="room">
-          <picture class="room__img">
-            <source media="(min-width: 1366px)" srcset="./images/catalog/room-suite-1366.jpg">
-            <source media="(min-width: 768px)" srcset="./images/catalog/room-suite-768.jpg">
-            <img src="./images/catalog/room-suite.jpg" alt="Сьют">
-          </picture>
-          <div class="room__desc">
-            <h3 class="desc__title">Сьют</h3>
-            <ul class="desc__features">
-              <li>Размеры (ШхГхВ) - 125х125х180 см</li>
-              <li>Площадь - 1,56 м2</li>
-              <li>Оснащение номера
-                <ul>
-                  <li class="feature__icon bedstone">
-                    <span class="feature__desc feature--tooltip">Лежак</span>
-                  </li>
-                  <li class="feature__icon scratcher">
-                    <span class="feature__desc feature--tooltip">Когтеточка</span>
-                  </li>
-                  <li class="feature__icon playground">
-                    <span class="feature__desc feature--tooltip">Игровой-комплекс</span>
-                  </li>
-                </ul>
-              </li>
-              <li>Цена за сутки: <span class="desc__price">350₽</span></li>
+          <div class="slideshow__controls">
+            <ul class="control__nav">
+              <li class="dot active"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
             </ul>
-            <button class="book-btn" type="button">Забронировать</button>
+            <div class="control__btns">
+              <button class="btn-prev" type="button">
+                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.00024 1L1.00024 5L5.00024 9" stroke="#FF7236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="btn-next" type="button">
+                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9L5 5L1 1" stroke="#FF7236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
           </div>
-        </article>
-        <article class="room">
-          <picture class="room__img">
-            <source media="(min-width: 1366px)" srcset="./images/catalog/room-luxe-1366.jpg">
-            <source media="(min-width: 768px)" srcset="./images/catalog/room-luxe-768.jpg">
-            <img src="./images/catalog/room-luxe.jpg" alt="Люкс">
-          </picture>
-          <div class="room__desc">
-            <h3 class="desc__title">Люкс</h3>
-            <ul class="desc__features">
-              <li>Размеры (ШхГхВ) - 160х160х180 см</li>
-              <li>Площадь - 2,56 м2</li>
-              <li>Оснащение номера
-                <ul>
-                  <li class="feature__icon bedstone">
-                    <span class="feature__desc feature--tooltip">Лежак</span>
-                  </li>
-                  <li class="feature__icon scratcher">
-                    <span class="feature__desc feature--tooltip">Когтеточка</span>
-                  </li>
-                  <li class="feature__icon playground">
-                    <span class="feature__desc feature--tooltip">Игровой-комплекс</span>
-                  </li>
-                  <li class="feature__icon condo">
-                    <span class="feature__desc feature--tooltip">Домик</span>
-                  </li>
-                </ul>
-              </li>
-              <li>Цена за сутки: <span class="desc__price">500₽</span></li>
-            </ul>
-            <button class="book-btn" type="button">Забронировать</button>
-          </div>
-        </article>
-        <article class="room">
-          <picture class="room__img">
-            <source media="(min-width: 1366px)" srcset="./images/catalog/room-super-luxe-1366.jpg">
-            <source media="(min-width: 768px)" srcset="./images/catalog/room-super-luxe-768.jpg">
-            <img src="./images/catalog/room-super-luxe.jpg" alt="Супер-Люкс">
-          </picture>
-          <div class="room__desc">
-            <h3 class="desc__title">Супер-Люкс</h3>
-            <ul class="desc__features">
-              <li>Размеры (ШхГхВ) - 180х160х180 см</li>
-              <li>Площадь - 2,88 м2</li>
-              <li>Оснащение номера
-                <ul>
-                  <li class="feature__icon bedstone">
-                    <span class="feature__desc feature--tooltip">Лежак</span>
-                  </li>
-                  <li class="feature__icon scratcher">
-                    <span class="feature__desc feature--tooltip">Когтеточка</span>
-                  </li>
-                  <li class="feature__icon playground">
-                    <span class="feature__desc feature--tooltip">Игровой-комплекс</span>
-                  </li>
-                  <li class="feature__icon condo">
-                    <span class="feature__desc feature--tooltip">Домик</span>
-                  </li>
-                </ul>
-              </li>
-              <li>Цена за сутки: <span class="desc__price">600₽</span></li>
-            </ul>
-            <button class="book-btn" type="button">Забронировать</button>
-          </div>
-        </article>
-      </section>
-      <section class="banner">
-        <picture class="banner__img">
-          <source media="(min-width: 1366px)" srcset="./images/catalog/promo/promo-cat-1366.jpg">
-          <source media="(min-width: 768px)" srcset="./images/catalog/promo/promo-cat-768.jpg">
-          <img src="./images/catalog/promo/promo-cat.jpg" alt="Промо акция">
-        </picture>
-        <div class="banner__desc">
-          <h1 class="desc__heading">
-            <span class="desc__note">Каждый 7-й день</span> бесплатно!
-          </h1>
-          <p class="desc__subheading">Акция действует при размещении в номерах “Люкс” и “Супер-Люкс”</p>
-          <button class="book-btn book--banner" type="button">Забронировать</button>
         </div>
       </section>
     </main>
